@@ -1,7 +1,7 @@
 Usage:
 
 	1. Enter Container
-		sudo docker run -it lede-rpi3-docker:latest /bin/bash
+		sudo docker run -it lede-project-docker:latest /bin/bash
 		cp rpi3-config.seed .config
 
 	2. make menuconfig <save to .config>
@@ -13,9 +13,9 @@ Reference:
 
 Create Image:
 
-	cd lede-rpi3-docker/
+	cd lede-project-docker/
 
-	sudo docker build -t lede-rpi3-docker .
+	sudo docker build -t lede-project-docker .
 
 List Images:
 
@@ -29,7 +29,7 @@ Remeve Image:
 
 Run Container:
 
-	sudo docker run -it lede-rpi3-docker:latest /bin/bash
+	sudo docker run -it lede-project-docker:latest /bin/bash
 
 List Containers:
 
