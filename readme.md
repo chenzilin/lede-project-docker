@@ -2,6 +2,7 @@ Usage:
 
 	1. Enter Container
 		sudo docker run -it lede-rpi3-docker:latest /bin/bash
+		cp rpi3-config.seed .config
 
 	2. make menuconfig <save to .config>
 

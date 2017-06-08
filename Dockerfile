@@ -13,7 +13,6 @@ RUN cd /home/lede && \
     cp feeds.conf.default feeds.conf && \
     ./scripts/feeds update -a && \
     ./scripts/feeds install -a && \
-    wget -c --no-check-certificate https://downloads.lede-project.org/releases/17.01.1/targets/brcm2708/bcm2710/config.seed && \
-    cp config.seed .config && \
     rm -rf tmp
+COPY rpi3-config.seed /home/lede/lede-project/
 WORKDIR /home/lede/lede-project
