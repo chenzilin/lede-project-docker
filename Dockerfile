@@ -12,8 +12,8 @@ RUN git config --global user.email "chenzilin115@gmail.com" && \
     git config --global user.name "ZiLin Chen"
 
 RUN cd /home/chenzilin/ && \
-    wget -c --no-check-certificate https://codeload.github.com/lede-project/source/zip/v17.01.2 && \
-    unzip source-17.01.2.zip && mv source-17.01.2 lede-project && rm source-17.01.2.zip v17.01.2 && \
+    wget -c --no-check-certificate https://codeload.github.com/lede-project/source/zip/v17.01.2  -O source-17.01.2.zip && \
+    unzip source-17.01.2.zip && mv source-17.01.2 lede-project && rm source-17.01.2.zip && \
     cd lede-project/ && git init . && git add -A . && git commit -am "initial commit based on v17.01.2"
 
 RUN cd /home/chenzilin/lede-project/ && \

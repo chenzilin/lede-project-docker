@@ -50,7 +50,7 @@ Remove Container:
 
 	sudo docker rm d48b68282c03
 
-Patitial Tar:
+Partition Tar:
 
 	tar cvjfa - dl/ |split -b 85m - dl.tar.bz2.
 
