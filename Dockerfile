@@ -14,5 +14,6 @@ RUN cd /home/lede && \
     ./scripts/feeds update -a && \
     ./scripts/feeds install -a && \
     rm -rf tmp
+COPY dl.tar.bz2.* /home/lede/lede-project/
 COPY rpi3-config.seed /home/lede/lede-project/
 WORKDIR /home/lede/lede-project

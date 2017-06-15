@@ -1,13 +1,17 @@
 Usage:
 
-	1. Enter Container
+	1. First Enter Container
 		sudo docker run -it lede-project-docker:latest /bin/bash
+		cat dl.tar.bz2.a* | tar xvj
 		cp rpi3-config.seed .config
 
 	2. make menuconfig <save to .config>
 
 	3. make -j16 V=s
 
+	4. Enter Exited Container
+		sudo docker ps -a
+		sudo docker start -ia 57c5d096ec6b
 
 Reference:
 
@@ -27,7 +31,7 @@ Remeve Image:
 
 	sudo docker image remove 7d9495d03763
 
-Run Container:
+First Run Container:
 
 	sudo docker run -it lede-project-docker:latest /bin/bash
 
@@ -37,6 +41,18 @@ List Containers:
 
 	sudo docker ps -a
 
+Enter Exited Container:
+
+	sudo docker ps -a
+
+	sudo docker start -ia 57c5d096ec6b
+
 Remove Container:
 
 	sudo docker rm d48b68282c03
+
+Patitial Tar:
+
+	tar cvjfa - dl/ |split -b 85m - dl.tar.bz2.
+
+	cat dl.tar.bz2.a* | tar xvj
